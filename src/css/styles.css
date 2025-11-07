@@ -1,0 +1,190 @@
+/* General */
+body {
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+h1 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+/* Contenedor de tabla */
+.table-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* Asegura visibilidad */
+  overflow-x: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Tabla */
+.table th,
+.table td {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.table thead {
+  background-color: #00796b;
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: #e0f2f1;
+}
+
+/* Nombre y apellido */
+.nombre-apellido {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Botones */
+.btn svg {
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.acciones a {
+  margin-right: 5px;
+}
+
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h3 {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 25px;
+}
+
+.sidebar-menu a.active {
+  background: rgba(52, 152, 219, 0.3);
+  border-left: 4px solid #3498db;
+}
+
+.sidebar-menu i {
+  margin-right: 10px;
+  font-size: 18px;
+  width: 25px;
+  text-align: center;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+.content-wrapper {
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .table-container {
+    padding: 10px;
+  }
+
+  .nombre-apellido {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .acciones a {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .sidebar {
+    width: 200px;
+    left: -200px;
+  }
+}
