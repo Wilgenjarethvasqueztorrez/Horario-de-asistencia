@@ -60,6 +60,7 @@
     <input type="text" class="form-control" name="Descripcion" value="<?php echo $row['descripcion']; ?>" placeholder="Ej: Día del Trabajador, Vacaciones anuales">  
   </div>  
   
+  <!-- Botones -->  
   <div class="text-center">  
     <button type="submit" class="btn btn-primary">Actualizar</button>  
     <a href="../dia_no_laboral.php" class="btn btn-dark">Cancelar</a>  

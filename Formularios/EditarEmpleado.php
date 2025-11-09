@@ -23,7 +23,7 @@
             <label for="">Usuario del Sistema</label>  
             <select class="form-select mb-3" name="UsuarioId" required>  
                 <?php  
-                $sqlUsuarios = $conexion->query("SELECT id, nombre, apellido, correo, rol_sistema FROM usuarios ORDER BY nombre ASC");  
+                $sqlUsuarios = $conexion->query("SELECT id, nombre, apellido, correo, rol_sistema FROM usuarios WHERE rol_sistema = 'Empleado'  ORDER BY nombre ASC");  
                 while ($usuario = $sqlUsuarios->fetch_assoc()) {  
                     $selected = ($row['empleado_id'] == $usuario['id']) ? "selected" : "";  
                     echo "<option value='".$usuario['id']."' $selected>"  

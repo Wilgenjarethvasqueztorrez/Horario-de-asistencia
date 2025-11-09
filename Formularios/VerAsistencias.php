@@ -46,7 +46,7 @@
         $fecha_actual = date('Y-m-d');  
         $fecha_hora_actual = date('Y-m-d H:i:s');  
           
-        // ===== SEMANA ACTUAL (Lunes a Domingo) =====  
+        // SEMANA ACTUAL (Lunes a Domingo) 
         // Calcular el lunes de la semana actual  
         $dia_semana = date('N'); // 1 (lunes) a 7 (domingo)  
         $inicio_semana = date('Y-m-d', strtotime("-" . ($dia_semana - 1) . " days"));  
@@ -59,7 +59,7 @@
                                        AND fecha <= '$fin_semana'");  
         $totalSemana = $sqlSemana->fetch_assoc()['total'] ?? 0;  
           
-        // ===== QUINCENA ACTUAL =====  
+        // QUINCENA ACTUAL 
         // Determinar si estamos en la primera (1-15) o segunda quincena (16-fin de mes)  
         $dia_mes = (int)date('d');  
         $mes_actual = date('m');  
@@ -83,7 +83,7 @@
                                          AND fecha <= '$fin_quincena'");  
         $totalQuincena = $sqlQuincena->fetch_assoc()['total'] ?? 0;  
           
-        // ===== MES ACTUAL (del 1 al último día del mes) =====  
+        // MES ACTUAL (del 1 al último día del mes) 
         $inicio_mes = date('Y-m-01'); // Primer día del mes actual  
         $fin_mes = date('Y-m-t'); // Último día del mes actual  
           
@@ -94,7 +94,7 @@
                                     AND fecha <= '$fin_mes'");  
         $totalMes = $sqlMes->fetch_assoc()['total'] ?? 0;  
           
-        // ===== AÑO ACTUAL (del 1 de enero al 31 de diciembre) =====  
+        // AÑO ACTUAL (del 1 de enero al 31 de diciembre) 
         $inicio_anio = date('Y-01-01'); // 1 de enero del año actual  
         $fin_anio = date('Y-12-31'); // 31 de diciembre del año actual  
           
@@ -106,6 +106,8 @@
         $totalAnio = $sqlAnio->fetch_assoc()['total'] ?? 0;  
       ?>  
         
+      <!-- Cards -->  
+      <!-- Total de horas a la semana -->
       <div class="col-md-3">  
         <div class="card text-center bg-primary text-white">  
           <div class="card-body">  
@@ -116,6 +118,7 @@
         </div>  
       </div>  
         
+      <!-- Total de horas a la quincena -->
       <div class="col-md-3">  
         <div class="card text-center bg-success text-white">  
           <div class="card-body">  
@@ -126,6 +129,7 @@
         </div>  
       </div>  
         
+      <!-- Total de horas a al mes -->
       <div class="col-md-3">  
         <div class="card text-center bg-warning text-dark">  
           <div class="card-body">  
@@ -136,6 +140,7 @@
         </div>  
       </div>  
         
+      <!-- Total de horas al año -->
       <div class="col-md-3">  
         <div class="card text-center bg-danger text-white">  
           <div class="card-body">  
@@ -169,6 +174,8 @@
               $total_horas_acumuladas += $resultado['total_horas'];  
           ?>  
           <tr>  
+
+            <!-- Hora de entrada y salida -->
             <td><?php echo date('d/m/Y', strtotime($resultado['fecha'])); ?></td>  
             <td><?php echo $resultado['hora_entrada']; ?></td>  
             <td>  
@@ -189,6 +196,8 @@
               }  
               ?>  
             </td>  
+
+            <!-- Bonton para eliminar -->
             <td class="acciones">  
               <a href="../CRUD/eliminarAsistencia.php?Id=<?php echo $resultado['id']; ?>&EmpleadoId=<?php echo $empleado_id; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de eliminar este registro?')">  
                 <i class="bi bi-trash3"></i> Eliminar  
@@ -206,6 +215,7 @@
       </table>  
     </div>  
   
+    <!-- Boton para regresar a empleados -->
     <div class="text-center mt-4">  
       <a href="../empleado.php" class="btn btn-primary">  
         <i class="bi bi-arrow-left"></i> Volver a Empleados  

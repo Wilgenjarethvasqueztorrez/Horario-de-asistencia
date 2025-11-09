@@ -50,6 +50,7 @@
       <option value="Empleado" <?php echo ($row['rol_sistema'] == 'Empleado') ? 'selected' : ''; ?>>Empleado</option>  
     </select>  
       
+    <!-- Botones -->  
     <div class="text-center">  
       <button type="submit" class="btn btn-primary">Actualizar</button>  
       <a href="../index.php" class="btn btn-dark">Cancelar</a>  

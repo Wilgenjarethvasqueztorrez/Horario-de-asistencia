@@ -68,6 +68,7 @@
     </div>  
   
     <script>  
+        // Mostrar o ocultar el campo de empleado según el tipo de dia no laboral seleccionado
         function toggleEmpleadoField() {  
             const motivo = document.getElementById('motivo').value;  
             const empleadoField = document.getElementById('empleadoField');  

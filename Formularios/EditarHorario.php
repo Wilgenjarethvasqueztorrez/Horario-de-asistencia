@@ -52,6 +52,7 @@
     <input type="number" class="form-control" name="HorasMinimas" step="0.5" min="0" max="24" value="<?php echo $row['horas_minimas']; ?>" required>  
   </div>  
   
+  <!-- Botones -->  
   <div class="text-center">  
    <button type="submit" class="btn btn-primary">Actualizar</button>  
    <a href="../horario.php" class="btn btn-dark">Cancelar</a> 

@@ -43,6 +43,7 @@
     ?>  
   </select>  
   
+  <!-- Botones -->  
   <div class="text-center">  
     <button type="submit" class="btn btn-primary">Actualizar</button>  
     <a href="../rol.php" class="btn btn-dark">Cancelar</a>  
