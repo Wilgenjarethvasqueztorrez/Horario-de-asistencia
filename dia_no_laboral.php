@@ -78,7 +78,6 @@
         </div>  
       </div>  
   
-      <!-- Tab de Vacaciones -->  
       <div class="tab-pane fade" id="vacaciones" role="tabpanel">  
         <div class="table-container">  
           <table class="table table-hover">  
