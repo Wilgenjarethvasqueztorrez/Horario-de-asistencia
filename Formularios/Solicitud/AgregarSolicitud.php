@@ -63,6 +63,7 @@ $empleado_id = $empleado['id'];
                         <i class="bi bi-send-fill me-1"></i> Enviar Solicitud
                     </button>
                     <a href="../../pages/perfil_empleado.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
                     </a>
                 </div>

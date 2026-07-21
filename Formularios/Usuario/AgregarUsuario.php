@@ -36,9 +36,9 @@
                     <label class="form-label-custom">Rol del Sistema</label>  
                     <select class="form-select form-control-custom" name="RolSistema" required>  
                         <option selected disabled value="">-- Seleccionar rol del sistema --</option>  
-                        <option value="Administrador">Administrador</option>  
-                        <option value="Oficina">Oficina</option>  
-                        <option value="Empleado">Empleado</option>  
+                        <option value="Administrador">👨‍💼 Administrador</option>  
+                        <option value="Oficina">💼 Oficina</option>  
+                        <option value="Empleado">👷‍♂️ Empleado</option>  
                     </select>  
                 </div>
                   
@@ -47,8 +47,9 @@
                         <i class="bi bi-person-plus-fill me-1"></i> Registrar
                     </button>  
                     <a href="../../pages/usuario.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
-                    </a>  
+                    </a>
                 </div>  
             </form>  
         </div>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">  
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />  
-    <link rel="stylesheet" href="../../src/css/styles.css?v=1.4" />
+    <link rel="stylesheet" href="../../src/css/styles.css" />
 </head>
 <body class="bg-light">  
     
@@ -96,8 +96,9 @@
                         <i class="bi bi-check-circle-fill me-1"></i> Registrar
                     </button>  
                     <a href="../../pages/asistencia.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
-                    </a>  
+                    </a>
                 </div>  
             </form>  
         </div>

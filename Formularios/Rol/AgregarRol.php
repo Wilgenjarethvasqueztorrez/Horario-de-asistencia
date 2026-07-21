@@ -46,8 +46,9 @@
                         <i class="bi bi-check-circle-fill me-1"></i> Registrar
                     </button>  
                     <a href="../../pages/rol.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
-                    </a>  
+                    </a>
                 </div>  
             </form>  
         </div>

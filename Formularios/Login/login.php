@@ -55,6 +55,10 @@ if (isset($_SESSION['usuario_id'])) {
                             echo 'Correo o contraseña incorrectos';
                         } elseif ($_GET['error'] == 'sesion') {
                             echo 'Debe iniciar sesión para acceder';
+                        } elseif ($_GET['error'] == 'no_autorizado') {  
+                            echo 'Tu cuenta de Google no está registrada en el sistema';  
+                        } elseif ($_GET['error'] == 'google') {  
+                            echo 'No se pudo completar el inicio de sesión con Google';  
                         }
                         echo '</div>';
                     }
@@ -82,6 +86,11 @@ if (isset($_SESSION['usuario_id'])) {
                                 <i class="bi bi-box-arrow-in-right"></i> Ingresar
                             </button>
                         </div>
+
+                        <div class="d-grid mt-3">
+                            <a href="../../CRUD/Login/googleLogin.php" class="btn btn-light btn-lg">
+                                <i class="bi bi-google"></i> Iniciar sesión con Google
+                            </a>
                     </form>
                 </div>
             </div>

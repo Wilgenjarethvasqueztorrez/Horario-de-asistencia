@@ -39,8 +39,8 @@
                 <div class="mb-3">
                     <label class="form-label-custom">Tipo de Horario</label>
                     <select class="form-select form-control-custom" name="Tipo" id="tipoHorario" required>
-                        <option value="Fijo" <?php echo ($row['tipo'] == 'Fijo') ? 'selected' : ''; ?>>Fijo</option>
-                        <option value="Flexible" <?php echo ($row['tipo'] == 'Flexible') ? 'selected' : ''; ?>>Flexible</option>
+                        <option value="Fijo" <?php echo ($row['tipo'] == 'Fijo') ? 'selected' : ''; ?>>🔒 Fijo</option>
+                        <option value="Flexible" <?php echo ($row['tipo'] == 'Flexible') ? 'selected' : ''; ?>>🔓 Flexible</option>
                     </select>
                 </div>
 
@@ -64,6 +64,7 @@
                         <i class="bi bi-arrow-clockwise me-1"></i> Actualizar
                     </button>
                     <a href="../../pages/horario.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
                     </a>
                 </div>

@@ -55,6 +55,7 @@
                         <i class="bi bi-arrow-clockwise me-1"></i> Actualizar
                     </button>
                     <a href="../../pages/rol.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
                     </a>
                 </div>

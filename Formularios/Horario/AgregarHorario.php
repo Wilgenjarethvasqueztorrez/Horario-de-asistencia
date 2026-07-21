@@ -26,9 +26,9 @@
                     <label class="form-label-custom">Tipo de Horario</label>  
                     <select class="form-select form-control-custom" name="Tipo" id="tipoHorario" required>  
                         <option value="" selected disabled>-- Seleccionar tipo --</option>  
-                        <option value="Fijo">Fijo</option>  
-                        <option value="Flexible">Flexible</option>  
-                    </select>  
+                        <option value="Fijo">🔒 Fijo</option>  
+                        <option value="Flexible">🔓 Flexible</option>  
+                    </select> 
                 </div>  
       
                 <div class="mb-3 d-none" id="horaInicioDiv">  
@@ -51,8 +51,9 @@
                         <i class="bi bi-check-circle-fill me-1"></i> Registrar
                     </button>  
                     <a href="../../pages/horario.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
-                    </a>  
+                    </a>
                 </div>  
             </form>  
         </div>

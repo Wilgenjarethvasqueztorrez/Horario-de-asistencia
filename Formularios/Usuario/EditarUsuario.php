@@ -48,9 +48,9 @@
                     <label class="form-label-custom">Rol del Sistema</label>  
                     <select class="form-select form-control-custom" name="RolSistema" required>  
                         <option disabled>-- Seleccionar rol del sistema --</option>  
-                        <option value="Administrador" <?php echo ($row['rol_sistema'] == 'Administrador') ? 'selected' : ''; ?>>Administrador</option>  
-                        <option value="Oficina" <?php echo ($row['rol_sistema'] == 'Oficina') ? 'selected' : ''; ?>>Oficina</option>  
-                        <option value="Empleado" <?php echo ($row['rol_sistema'] == 'Empleado') ? 'selected' : ''; ?>>Empleado</option>  
+                        <option value="Administrador" <?php echo ($row['rol_sistema'] == 'Administrador') ? 'selected' : ''; ?>>👨‍💼 Administrador</option>  
+                        <option value="Oficina" <?php echo ($row['rol_sistema'] == 'Oficina') ? 'selected' : ''; ?>>💼 Oficina</option>  
+                        <option value="Empleado" <?php echo ($row['rol_sistema'] == 'Empleado') ? 'selected' : ''; ?>>👷‍♂️ Empleado</option>  
                     </select>  
                 </div>
                   
@@ -59,8 +59,9 @@
                         <i class="bi bi-arrow-clockwise me-1"></i> Actualizar
                     </button>  
                     <a href="../../pages/usuario.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
-                    </a>  
+                    </a>
                 </div>  
             </form>  
         </div>

@@ -35,10 +35,11 @@
                 <input type="hidden" name="Id" value="<?php echo $datos['id']; ?>">
 
                 <!-- Seleccionar empleado -->
-                <label for="">Empleado</label>
-                <select id="select2" class="form-select mb-3" name="EmpleadoId" required>
-                    <?php
-                    $sqlEmpleados = $conexion->query("SELECT empleados.id,   
+                <div class="mb-3">
+                    <label class="form-label-custom">Empleado</label>  
+                    <select id="select2" class="form-select form-control-custom" name="EmpleadoId" required>
+                        <?php
+                        $sqlEmpleados = $conexion->query("SELECT empleados.id,   
                                                          usuarios.nombre,   
                                                          usuarios.apellido,  
                                                          roles.nombre as rol_nombre  
@@ -47,35 +48,36 @@
                                                   INNER JOIN roles ON empleados.rol_id = roles.id  
                                                   WHERE empleados.activo = 1  
                                                   ORDER BY usuarios.nombre ASC");
-                    while ($empleado = $sqlEmpleados->fetch_assoc()) {
-                        $selected = ($empleado['id'] == $datos['empleado_id']) ? 'selected' : '';
-                        echo "<option value='" . $empleado['id'] . "' $selected>" . $empleado['nombre'] . " " . $empleado['apellido'] . " - " . $empleado['rol_nombre'] . "</option>";
-                    }
-                    ?>
-                </select>
+                        while ($empleado = $sqlEmpleados->fetch_assoc()) {
+                            $selected = ($empleado['id'] == $datos['empleado_id']) ? 'selected' : '';
+                            echo "<option value='" . $empleado['id'] . "' $selected>" . $empleado['nombre'] . " " . $empleado['apellido'] . " - " . $empleado['rol_nombre'] . "</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
 
                 <!-- Fecha -->
                 <div class="mb-3">
-                    <label class="form-label">Fecha</label>
-                    <input type="date" class="form-control" name="Fecha" value="<?php echo $datos['fecha']; ?>" required>
+                    <label class="form-label-custom">Fecha</label>
+                    <input type="date" class="form-control form-control-custom" name="Fecha" value="<?php echo $datos['fecha']; ?>" required>
                 </div>
 
                 <!-- Hora de entrada -->
                 <div class="mb-3">
-                    <label class="form-label">Hora de Entrada</label>
-                    <input type="time" class="form-control" name="HoraEntrada" id="horaEntrada" value="<?php echo $datos['hora_entrada']; ?>" required>
+                    <label class="form-label-custom">Hora de Entrada</label>
+                    <input type="time" class="form-control form-control-custom" name="HoraEntrada" id="horaEntrada" value="<?php echo $datos['hora_entrada']; ?>" required>
                 </div>
 
                 <!-- Hora de salida -->
                 <div class="mb-3">
-                    <label class="form-label">Hora de Salida</label>
-                    <input type="time" class="form-control" name="HoraSalida" id="horaSalida" value="<?php echo $datos['hora_salida']; ?>">
+                    <label class="form-label-custom">Hora de Salida</label>
+                    <input type="time" class="form-control form-control-custom" name="HoraSalida" id="horaSalida" value="<?php echo $datos['hora_salida']; ?>">
                 </div>
 
                 <!-- Total de horas -->
-                <div class="mb-3">
-                    <label class="form-label">Total de Horas</label>
-                    <input type="text" class="form-control" name="TotalHoras" id="totalHoras" value="<?php echo $datos['total_horas']; ?>" readonly>
+                <div class="mb-4">
+                    <label class="form-label-custom">Total de Horas</label>
+                    <input type="text" class="form-control form-control-custom" name="TotalHoras" id="totalHoras" value="<?php echo $datos['total_horas']; ?>" readonly>
                 </div>
 
                 <script>
@@ -112,6 +114,7 @@
                         <i class="bi bi-check-circle-fill me-1"></i> Editar
                     </button>
                     <a href="../../pages/asistencia.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i>
                         Cancelar
                     </a>
                 </div>

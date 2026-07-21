@@ -43,8 +43,8 @@
                     <label class="form-label-custom">Tipo de Registro</label>
                     <select class="form-select form-control-custom" name="Motivo" id="motivo" required onchange="toggleEmpleadoField()">
                         <option disabled>-- Seleccionar tipo --</option>
-                        <option value="Feriado" <?php echo ($row['motivo'] == 'Feriado') ? 'selected' : ''; ?>>Feriado (Aplica a todos)</option>
-                        <option value="Vacaciones" <?php echo ($row['motivo'] == 'Vacaciones') ? 'selected' : ''; ?>>Vacaciones (Empleado específico)</option>
+                        <option value="Feriado" <?php echo ($row['motivo'] == 'Feriado') ? 'selected' : ''; ?>>🏛️ Feriado (Aplica a todos)</option>
+                        <option value="Vacaciones" <?php echo ($row['motivo'] == 'Vacaciones') ? 'selected' : ''; ?>>🏖️ Vacaciones (Empleado específico)</option>
                     </select>
                 </div>
 
@@ -90,6 +90,7 @@
                         <i class="bi bi-arrow-clockwise me-1"></i> Actualizar
                     </button>
                     <a href="../../pages/dia_no_laboral.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
                     </a>
                 </div>

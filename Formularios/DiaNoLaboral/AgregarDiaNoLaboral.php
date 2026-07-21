@@ -25,8 +25,8 @@
                     <label class="form-label-custom">Tipo de Registro</label>
                     <select class="form-select form-control-custom" name="Motivo" id="motivo" required onchange="toggleEmpleadoField()">
                         <option selected disabled value="">-- Seleccionar tipo --</option>
-                        <option value="Feriado">Feriado (Aplica a todos)</option>
-                        <option value="Vacaciones">Vacaciones (Empleado específico)</option>
+                        <option value="Feriado">🏛️ Feriado (Aplica a todos)</option>
+                        <option value="Vacaciones">🏖️ Vacaciones (Empleado específico)</option>
                     </select>
                 </div>
 
@@ -72,6 +72,7 @@
                         <i class="bi bi-check-circle-fill me-1"></i> Registrar
                     </button>
                     <a href="../../pages/dia_no_laboral.php" class="btn-cancel-custom text-decoration-none d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-circle-fill me-1"></i> 
                         Cancelar
                     </a>
                 </div>
