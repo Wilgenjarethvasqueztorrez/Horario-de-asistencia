@@ -34,6 +34,7 @@ if ($resultado->num_rows > 0) {
         $_SESSION['usuario_apellido'] = $usuario['apellido'];
         $_SESSION['usuario_correo'] = $usuario['correo'];
         $_SESSION['usuario_rol'] = $usuario['rol_sistema'];
+        $_SESSION['login_metodo'] = 'local'; // <-- login con correo y contraseña  
 
         if ($usuario['rol_sistema'] == 'Administrador') {
             header("location:../../index.php");
