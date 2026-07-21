@@ -32,10 +32,10 @@ verificarRol(['Administrador', 'Oficina']);
 
     <?php include(BASE_PATH . "src/includes/Componentes/sidebar.php"); ?>
 
-    <main class="container mt-4">
+    <main class="container mt-4 mb-5">
         <?php include(BASE_PATH . "src/includes/Componentes/userbar.php"); ?>
 
-        <h1 class="bg-info p-3 text-white text-center rounded">🔔 LISTADO DE SOLICITUDES</h1>
+        <h1 class="titulo-modulo-calendario p-3 text-white text-center rounded mb-4">🔔 LISTADO DE SOLICITUDES</h1>
 
         <div class="table-container">
             <table id="tabla" class="table table-hover">

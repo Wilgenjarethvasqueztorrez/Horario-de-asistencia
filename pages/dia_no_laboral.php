@@ -31,10 +31,10 @@ verificarRol(['Administrador', 'Oficina']);
 
     <?php include(BASE_PATH . "src/includes/Componentes/sidebar.php"); ?>
 
-    <main class="container mt-4">
+    <main class="container mt-4 mb-5">
         <?php include(BASE_PATH . "src/includes/Componentes/userbar.php"); ?>
 
-        <h1 class="bg-info p-3 text-white text-center rounded">📅 GESTIÓN DE DÍAS NO LABORALES</h1>
+        <h1 class="titulo-modulo-calendario p-3 text-white text-center rounded mb-4">📅 GESTIÓN DE DÍAS NO LABORALES</h1>
 
         <div class="text-end mb-3">
             <a href="<?php echo BASE_URL; ?>Formularios/DiaNoLaboral/AgregarDiaNoLaboral.php" class="btn btn-success">
@@ -43,17 +43,15 @@ verificarRol(['Administrador', 'Oficina']);
         </div>
 
         <!-- Tablas para separar Feriados y Vacaciones -->
-        <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+        <ul class="nav nav-tabs mb-0 border-bottom-0" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="feriados-tab" data-bs-toggle="tab" data-bs-target="#feriados"
-                    type="button">
-                    🏛️ Feriados
+                <button class="nav-link active" id="feriados-tab" data-bs-toggle="tab" data-bs-target="#feriados" type="button" role="tab">
+                    🏛️ Feriados Institucionales
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="vacaciones-tab" data-bs-toggle="tab" data-bs-target="#vacaciones"
-                    type="button">
-                    🏖️ Vacaciones
+                <button class="nav-link" id="vacaciones-tab" data-bs-toggle="tab" data-bs-target="#vacaciones" type="button" role="tab">
+                    🏖️ Vacaciones de Empleados
                 </button>
             </li>
         </ul>

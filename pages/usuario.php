@@ -33,10 +33,10 @@ verificarRol(['Administrador']);
 
     <?php include(BASE_PATH . "src/includes/Componentes/sidebar.php"); ?>
 
-    <main class="container mt-4">
+    <main class="container mt-4 content-wrapper">
         <?php include(BASE_PATH . "src/includes/Componentes/userbar.php"); ?>
 
-        <h1 class="bg-primary p-3 text-white text-center rounded">👥 GESTIÓN DE USUARIOS DEL SISTEMA</h1>
+        <h1 class="titulo-modulo p-3 text-white text-center rounded mb-4">👥 GESTIÓN DE USUARIOS DEL SISTEMA</h1>
 
         <div class="text-end mb-3">
             <a href="<?php echo BASE_URL; ?>Formularios/Usuario/AgregarUsuario.php" class="btn btn-success">

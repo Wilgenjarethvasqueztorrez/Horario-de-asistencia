@@ -33,10 +33,10 @@ verificarRol(['Administrador', 'Oficina']);
 
     <?php include(BASE_PATH . "src/includes/Componentes/sidebar.php"); ?>
 
-    <main class="container mt-4">
+    <main class="container mt-4 mb-5">
         <?php include(BASE_PATH . "src/includes/Componentes/userbar.php"); ?>
 
-        <h1 class="bg-info p-3 text-white text-center rounded">📋 LISTADO DE HORARIOS</h1>
+        <h1 class="titulo-modulo-horarios p-3 text-white text-center rounded mb-4">📋 LISTADO DE HORARIOS</h1>
 
         <div class="text-end mb-3">
             <a href="<?php echo BASE_URL; ?>Formularios/Horario/AgregarHorario.php" class="btn btn-success">
@@ -66,9 +66,9 @@ verificarRol(['Administrador', 'Oficina']);
                             <td>
                                 <?php
                                 if ($resultado['tipo'] == 'Fijo') {
-                                    echo "<span class='badge bg-primary'>Fijo</span>";
+                                    echo "<span class='badge-horario-fijo'><i class='bi bi-lock-fill me-1'></i>Fijo</span>";
                                 } else {
-                                    echo "<span class='badge bg-info'>Flexible</span>";
+                                    echo "<span class='badge-horario-flexible'><i class='bi bi-unlock-fill me-1'></i>Flexible</span>";
                                 }
                                 ?>
                             </td>

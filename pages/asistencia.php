@@ -32,10 +32,10 @@ verificarRol(['Administrador', 'Oficina']);
 
     <?php include(BASE_PATH . "src/includes/Componentes/sidebar.php"); ?>
 
-    <main class="container mt-4">
+    <main class="container mt-4 mb-5">
         <?php include(BASE_PATH . "src/includes/Componentes/userbar.php"); ?>
 
-        <h1 class="bg-info p-3 text-white text-center rounded">📋 LISTADO DE ASISTENCIAS</h1>
+        <h1 class="titulo-gestion-asistencias p-3 text-white text-center rounded mb-4">📋 LISTADO DE ASISTENCIAS</h1>
 
         <div class="text-end mb-3">
             <a href="<?php echo BASE_URL; ?>Formularios/Asistencia/AgregarAsistencia.php" class="btn btn-success">
@@ -72,46 +72,54 @@ verificarRol(['Administrador', 'Oficina']);
 
                     while ($resultado = $sql->fetch_assoc()) {
                     ?>
-                    <tr>
-                        <td>
-                            <div class="nombre-apellido">
-                                <span><strong><?php echo $resultado['nombre']; ?></strong></span>
-                                <span><?php echo $resultado['apellido']; ?></span>
-                            </div>
-                        </td>
-                        <td><?php echo $resultado['rol_nombre']; ?></td>
-                        <td><?php echo date('d/m/Y', strtotime($resultado['fecha'])); ?></td>
-                        <td><?php echo date('h:i A', strtotime($resultado['hora_entrada'])); ?></td>
-                        <td>
-                            <?php
+                        <tr>
+                            <td>
+                                <div class="nombre-apellido">
+                                    <span><strong><?php echo $resultado['nombre']; ?></strong></span>
+                                    <span><?php echo $resultado['apellido']; ?></span>
+                                </div>
+                            </td>
+                            <td><?php echo $resultado['rol_nombre']; ?></td>
+                            <td><?php echo date('d/m/Y', strtotime($resultado['fecha'])); ?></td>
+                            <td>
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-box-arrow-in-right text-success"></i>
+                                    <?php echo date('h:i A', strtotime($resultado['hora_entrada'])); ?>
+                                </span>
+                            </td>
+                            <td>
+                                <?php
                                 if ($resultado['hora_salida']) {
-                                    echo date('h:i A', strtotime($resultado['hora_salida']));  
+                                    echo "<span class='badge bg-light text-dark border'>
+                                            <i class='bi bi-box-arrow-left text-danger'></i> "
+                                            . date('h:i A', strtotime($resultado['hora_salida'])) .
+                                        "</span>";
                                 } else {
-                                    echo "<span class='text-dark badge bg-warning'>Sin registrar</span>";
+                                    echo "<span class='text-dark badge bg-warning'><i class='bi bi-exclamation-triangle'></i> Sin registrar</span>";
                                 }
                                 ?>
-                        </td>
-                        <td>
-                            <?php
+                            </td>
+                            <td>
+                                <?php
                                 if ($resultado['total_horas'] > 0) {
                                     echo number_format($resultado['total_horas'], 2) . " hrs";
                                 } else {
                                     echo "<span class='text-dark'>-</span>";
                                 }
                                 ?>
-                        </td>
-                        <td class="acciones">
-                            <a href="<?php echo BASE_URL; ?>Formularios/Asistencia/EditarAsistencia.php?Id=<?php echo $resultado['id']; ?>"
-                                class="btn btn-warning btn-sm">
-                                <i class="bi bi-pencil"></i> Editar
-                            </a>
-                            <a href="<?php echo BASE_URL; ?>CRUD/Asistencia/eliminarAsistencia.php?Id=<?php echo $resultado['id']; ?>"
-                                class="btn btn-danger btn-sm"
-                                onclick="event.preventDefault(); confirmarEliminacion(this.href)">
-                                <i class="bi bi-trash3"></i> Eliminar
-                            </a>
-                        </td>
-                    </tr>
+                            </td>
+                            <td class="acciones">
+                                <a href="<?php echo BASE_URL; ?>Formularios/Asistencia/EditarAsistencia.php?Id=<?php echo $resultado['id']; ?>"
+                                    class="btn btn-warning btn-sm">
+                                    <i class="bi bi-pencil"></i> Editar
+                                </a>
+                                <a href="<?php echo BASE_URL; ?>CRUD/Asistencia/eliminarAsistencia.php?Id=<?php echo $resultado['id']; ?>"
+                                    class="btn btn-danger btn-sm"
+                                    onclick="event.preventDefault(); confirmarEliminacion(this.href)">
+                                    <i class="bi bi-trash3"></i> Eliminar
+                                </a>
+                            </td>
+                        </tr>
                     <?php } ?>
                 </tbody>
             </table>

@@ -32,10 +32,10 @@ verificarRol(['Administrador', 'Oficina']);
 
     <?php include(BASE_PATH . "src/includes/Componentes/sidebar.php"); ?>
 
-    <main class="container mt-4">
+    <main class="container mt-4 content-wrapper">
         <?php include(BASE_PATH . "src/includes/Componentes/userbar.php"); ?>
 
-        <h1 class="bg-info p-3 text-white text-center rounded">👷 GESTIÓN DE EMPLEADOS</h1>
+        <h1 class="titulo-modulo p-3 text-white text-center rounded mb-4">🧑‍💼 GESTIÓN DE EMPLEADOS</h1>
 
         <div class="text-end mb-3">
             <a href="<?php echo BASE_URL; ?>Formularios/Empleado/AgregarEmpleado.php" class="btn btn-success">
