@@ -40,6 +40,13 @@ h6 {
   opacity: 1;
 }
 
+ /* Estilizado del título principal acoplado a la línea institucional */
+        .titulo-modulo {
+            background: linear-gradient(135deg, #1d439c 0%, #153482 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
 /* ============================================  
     TABLAS GENERALES  
    ============================================ */
@@ -611,9 +618,11 @@ body.establecer-password-page {
 }
 
 .select2-selection {
-  min-height: 38px !important;
-  padding: 0.375rem 0.75rem !important;
-  font-size: 1rem !important;
+  min-height: 44px !important;
+  /* antes 38px */
+  padding: 10px 14px !important;
+  /* antes 0.375rem 0.75rem */
+  font-size: 0.95rem !important;
   line-height: 1.5 !important;
   border: 1px solid #cbd5e1 !important;
   border-radius: 0.25rem !important;
@@ -628,7 +637,7 @@ body.establecer-password-page {
 }
 
 .select2-selection__arrow {
-  height: 36px !important;
+  height: 42px !important;
 }
 
 .select2-selection__arrow b {
